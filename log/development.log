@@ -216,3 +216,19 @@ Started GET "/posts/new" for 24.252.175.98 at 2018-01-14 12:36:43 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 24.252.175.98 at 2018-01-14 12:37:01 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 24.252.175.98 at 2018-01-14 12:37:14 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HXGEba4nJtEm7Mk+jIfQ7sH674vXWMm4q2GLJ2W3fGtVdM7MNTp/iyzmamhDCcmz1J5kAslU/udshxLRRJ5bPw==", "post"=>{"title"=>"!", "description"=>"Hello"}, "submit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "!"], ["description", "Hello"], ["created_at", "2018-01-14 12:37:14.670867"], ["updated_at", "2018-01-14 12:37:14.670867"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+Redirected to http://165.227.31.156:45772/posts
+Completed 302 Found in 39ms (ActiveRecord: 9.2ms)
